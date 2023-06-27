@@ -19,12 +19,13 @@ public class EvenPositionElement {
 		Iterator<Integer> it = al.iterator();
 		while (it.hasNext()) {
 			Integer ip = it.next();
-			for (int i = 0; i < al.size(); i++) {
+			for (int i = 0; i< al.size(); i++) {
 				if (i % 2 == 0) {
-					System.out.println("psotion" + i + " element" + al.get(i));
+				System.out.println( i+" element" + al.get(i));
 				}
-
+				
 			}
+		
 		}
 
 	}

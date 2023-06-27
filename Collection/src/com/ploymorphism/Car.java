@@ -30,6 +30,12 @@ public class Car {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	@Override
+	public String toString() {
+		return "Car [model_no=" + model_no + ", name=" + name + ", colour=" + colour + ", price=" + price + "]";
+	}
+	
+	
 	
 	
 
