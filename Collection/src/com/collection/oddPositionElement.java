@@ -2,7 +2,7 @@ package com.collection;
 
 import java.util.*;
 
-public class EvenPositionElement {
+public class oddPositionElement {
 
 	public static void main(String[] args) {
 
@@ -19,17 +19,14 @@ public class EvenPositionElement {
 		Iterator<Integer> it = al.iterator();
 		while (it.hasNext()) {
 			Integer ip = it.next();
-			for (int i = 0; i< al.size(); i++) {
-				if (i % 2 == 0) {
-				System.out.println( i+" element" + al.get(i));
-				}
-				
+
+			if (it.hasNext()) {
+				System.out.print(it.next());
+
 			}
-		
+
 		}
 
 	}
 
 }
-
-

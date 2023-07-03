@@ -11,6 +11,7 @@ public class Merge {
 		al.add(2);
 		al.add(3);
 		al.add(4);
+		
 
 		ArrayList<Integer> b1 = new ArrayList<>();
 		b1.add(100);

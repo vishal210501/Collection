@@ -3,6 +3,8 @@ package com.ploymorphism;
 import java.util.*;
 
 public class Carinfo {
+	
+	
 
 	public static void main(String[] args) {
 
@@ -27,11 +29,11 @@ public class Carinfo {
 			c.setPrice(cprice);
 
 			cr.add(c);
-			
+			String color="red";
 			Iterator<Car>it=cr.iterator();
 			while(it.hasNext()) {
 				Car crr=it.next();
-				if(crr.getColour()=="red") {
+				if(crr.getColour().equals(color)) {
 					System.out.println(crr);
 				}
 			}

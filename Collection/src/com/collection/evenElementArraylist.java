@@ -2,7 +2,7 @@ package com.collection;
 
 import java.util.*;
 
-public class EvenElementArraylist {
+public class evenElementArraylist {
 
 	public static void main(String[] args) {
 
