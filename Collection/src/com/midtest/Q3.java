@@ -1,56 +1,45 @@
 package com.midtest;
-// 
-interface Test {
 
-	void show();
-
-	default void display() {
-		System.out.println("this is mathematics");
-	}
-
-}
-
-class Addition implements Test {
-
-	@Override
-	public void show() {
-		System.out.println("this is Addition");
-
-	}
-}
-
-class Substraction implements Test {
-	@Override
-	public void show() {
-		System.out.println("this is substraction");
-	}
-}
-
-class Multiplication implements Test {
-	@Override
-	public void show() {
-		System.out.println("this is multiplication");
-	}
-}
+import java.util.Arrays;
 
 public class Q3 {
 
 	public static void main(String[] args) {
+		String s1 = "thick sticks";
+		s1 = s1.replace(" ", "");
+		String s2 = "thin bricks";
+		s2 = s2.replace(" ", "");
 
-		Test s1 = new Addition();
-		
-		Test s2 = new Substraction();
-		
-		Test s3 = new Multiplication();
+		char ch1[] = s1.toCharArray();
+		char ch2[] = s2.toCharArray();
 
-		s1.show();
-		s1.display();
-
-		s2.show();
-		s2.display();
-
-		s3.show();
-		s3.display();
+		String s3 = "";
+		for (int i = 0; i < ch1.length; i++) {
+			if (ch1[i] == '\0') {
+				continue;
+			}
+			int count = 1;
+			for (int j = 0; j < ch2.length; j++) {
+				if (ch1[i] == ch2[j]) {
+					count++;
+					ch2[j] = '\0';
+				}
+			}
+			if (count > 1) {
+				s3 = s3 + ch1[i];
+			}
+		}
+		char ch3[] = s3.toCharArray();
+		for (int i = 0; i < ch3.length; i++) {
+			for (int j = i + 1; j < ch3.length; j++) {
+				if (ch3[i] > ch3[j]) {
+					char temp = ch3[i];
+					ch3[i] = ch3[j];
+					ch3[j] = temp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(ch3));
 
 	}
 

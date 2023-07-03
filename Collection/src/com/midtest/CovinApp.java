@@ -2,7 +2,7 @@ package com.midtest;
 
 import java.util.Scanner;
 
-class NotEligibleForVaccinationException extends RuntimeException {
+class NotEligibleForVaccinationException extends Exception {
 	public NotEligibleForVaccinationException() {
 		super();
 	}
@@ -13,14 +13,14 @@ class NotEligibleForVaccinationException extends RuntimeException {
 }
 
 public class CovinApp {
-	public static void show(boolean b, int d) {
+	public static void show(boolean b, int d) throws NotEligibleForVaccinationException {
 
-		boolean istaken =true;
+		boolean istaken = true;
 
 		if (b == false) {
-			System.out.println("please take vaccination");
+			throw new NotEligibleForVaccinationException("please take vaccination");
 		} else if (d < 60) {
-			System.out.println("60 days are not completed");
+			throw new NotEligibleForVaccinationException("60 days are not completed");
 		} else if (b == true && d > 60) {
 			System.out.println("you can take 2nd dose");
 			System.out.println("vrfication completed.......");
@@ -35,14 +35,13 @@ public class CovinApp {
 		boolean b = sc.nextBoolean();
 		System.out.println("how many days are compleleted after taking vaccine");
 		int d = sc.nextInt();
-		CovinApp.show(b, d);
+		// CovinApp.show(b, d);
 
 		try {
 			CovinApp.show(b, d);
 		} catch (NotEligibleForVaccinationException e) {
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			sc.close();
 			System.out.println("done.........................");
 		}
