@@ -1,8 +1,9 @@
 package com.midtest;
+
 // exception
 import java.util.*;
 
-import sun.security.util.Password;
+//import sun.security.util.Password;
 
 class InvalidCharacterException extends RuntimeException {
 
@@ -13,7 +14,6 @@ class InvalidCharacterException extends RuntimeException {
 	public InvalidCharacterException(String msg) {
 		super(msg);
 	}
-
 }
 
 class InvalidLengthException extends RuntimeException {
