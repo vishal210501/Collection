@@ -21,9 +21,7 @@ public class SortElement {
 //				System.out.println(s);  
 //			}
 			
-			if()) {
-				System.out.println(s);
-			}
+			
 		}
 
 	}

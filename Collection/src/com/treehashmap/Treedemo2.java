@@ -2,7 +2,7 @@ package com.treehashmap;
 
 import java.util.*;
 
-class Student /* implements Comparable<Student>*/ {
+class Student  implements Comparable<Student> {
 	int id;
 	String name;
 	int marks;
@@ -19,11 +19,11 @@ class Student /* implements Comparable<Student>*/ {
 		return "Student [id=" + id + ", name=" + name + ", marks=" + marks + "]";
 	}
 
-//	@Override
-//	public int compareTo(Student o) {
-//
-//		return o.marks - this.marks;
-//	}
+	@Override
+	public int compareTo(Student o) {
+
+		return o.marks - this.marks;
+	}
 
 }
 
@@ -35,6 +35,8 @@ public class Treedemo2 {
 		mt.put(new Student(103, "c", 82), "Goa");
 		mt.put(new Student(102, "d", 92), "pune");
 		mt.put(new Student(105, "b", 73), "Mumbai");
+		
+	
 
 		System.out.println(".................................................................................");
 
